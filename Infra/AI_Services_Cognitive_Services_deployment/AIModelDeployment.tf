@@ -1,8 +1,4 @@
-# 1. Resource Group
-resource "azurerm_resource_group" "RG_AIservice_new_model" {
-  name     = "oai-llm-qa-centralus"
-  location = "Central US"
-}
+
 
 # 2. Cognitive Services Account
 resource "azurerm_cognitive_account" "AImodel_ICS" {
