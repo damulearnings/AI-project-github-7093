@@ -16,8 +16,8 @@ resource "azurerm_cognitive_deployment" "oai-model-deployment-D" {
   cognitive_account_id = azurerm_cognitive_account.ai-service-OpenAI-D.id
   model {
     format  = "OpenAI"
-    name    = "gpt-4.1"
-    version = "2025-04-14"
+    name    = "gpt-4o-mini"
+    version = "2024-07-18"
   }
   sku {
     name = "Standard"
