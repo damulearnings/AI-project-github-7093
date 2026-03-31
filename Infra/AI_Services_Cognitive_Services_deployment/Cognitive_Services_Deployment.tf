@@ -1,6 +1,5 @@
 #  Create a Resource Group for AI-Services i.e. Cognitive Services 
 
-
 #  Cognitive Services Account (e.g., for OpenAI) - to hold all AI-Services 
 #resource "azurerm_cognitive_account" "ai-service-OpenAI-D" {
 # name                = "oai-QA-service-account-D"
@@ -51,21 +50,7 @@ resource "azurerm_cognitive_account" "ai_service_openai_D" {
   sku_name            = "S0"
 }
 
-# 3. Model Deployment - GPT-4o-mini
-resource "azurerm_cognitive_deployment" "gpt4o_mini_deployment" {
-  name                 = "gpt-4o-mini-deploy"
-  cognitive_account_id = azurerm_cognitive_account.ai_service_openai_D.id
 
-  model {
-    format  = "OpenAI"
-    name    = "gpt-4o-mini"
-    version = "2024-07-18"
-  }
-
-  sku {
-    name = "Standard"
-  }
-}
 
 # 4. Model Deployment - GPT-4 Turbo
 resource "azurerm_cognitive_deployment" "gpt4_turbo_deployment" {
